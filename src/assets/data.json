@@ -1,0 +1,41 @@
+[
+   {
+    "id":"1",
+    "image": "buty1.jpg",
+    "title": "Nike Air Jordan",
+    "price": "469,99",
+    "color":["🟢", "🔵","⚪","⚫"],
+    "size": ["36.5","37","37.5","38","38.5","39","39.5","40","40.5","41","41.5","42","42.5","43"],
+    "desc":"Te buty  o niskim profilu zostały wykonane z wysokiej jakości mieszanki materiałów i zamkniętego w pięcie kultowego systemu Air, który amortyzuje wstrząsy podczas kontaktu stopy i podłoża. Wysokiej jakości skóra vibe retro nawiązując do oryginalnych kolorystyk tego modelu. "
+  },
+  {
+    "id":"2",
+    "image": "buty2.jpg",
+    "title": "Adidas",
+    "price": "369,99",
+    "color":["🟢", "🔵","⚪","⚫"],
+    "size": ["36.5","37","37.5","38","38.5","39","39.5","40","40.5","41","41.5","42","42.5","43"],
+    "desc":"Te buty  o niskim profilu zostały wykonane z wysokiej jakości mieszanki materiałów i zamkniętego w pięcie kultowego systemu Air, który amortyzuje wstrząsy podczas kontaktu stopy i podłoża. Wysokiej jakości skóra vibe retro nawiązując do oryginalnych kolorystyk tego modelu. "
+  },
+  {
+    "id":"3",
+    "image": "buty3.jpg",
+    "title": "Puma",
+    "price": "399,99",
+    "color":["🟢", "🔵","⚪","⚫"],
+    "size": ["36.5","37","37.5","38","38.5","39","39.5","40","40.5","41","41.5","42","42.5","43"],
+    "desc":"Te buty  o niskim profilu zostały wykonane z wysokiej jakości mieszanki materiałów i zamkniętego w pięcie kultowego systemu Air, który amortyzuje wstrząsy podczas kontaktu stopy i podłoża. Wysokiej jakości skóra vibe retro nawiązując do oryginalnych kolorystyk tego modelu. "
+  },
+  {
+    "id":"4",
+    "image": "buty4.jpg",
+    "title": "Vans",
+    "price": "529,99",
+    "color":["🟢", "🔵","⚪","⚫"],
+    "size": ["36.5","37","37.5","38","38.5","39","39.5","40","40.5","41","41.5","42","42.5","43"],
+    "desc":"Te buty  o niskim profilu zostały wykonane z wysokiej jakości mieszanki materiałów i zamkniętego w pięcie kultowego systemu Air, który amortyzuje wstrząsy podczas kontaktu stopy i podłoża. Wysokiej jakości skóra vibe retro nawiązując do oryginalnych kolorystyk tego modelu. "
+  }
+
+
+  
+]
