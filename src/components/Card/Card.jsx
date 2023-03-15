@@ -1,8 +1,8 @@
 import React from 'react'
 import './Card.css'
-const Card = ({key,title,image,price,color,size,desc}) => {
+const Card = ({key,title,image,price,color,size,desc,onClick}) => {
   return (
-    <div className="card" key={key}>
+    <div className="card" key={key} onClick={onClick}>
         <h4>{title}</h4>
         <div className="wrapper-img">
         <img src={image} alt="image" />

@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Contact from './pages/Contact/Contact'
 import Cart from './pages/Cart/Cart'
+import CardEdit from './pages/CardEdit/CardEdit'
 import Main,{ mainLoader }  from './layouts/Main/Main'
 const router = createBrowserRouter([
   {
@@ -13,9 +14,20 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Dashboard />,
-        // loader: dashboardLoader,
-        // action: dashboardAction,
         errorElement: <Error />,
+      },
+      {
+        path: 'card-edit',
+
+        errorElement: <Error />,
+        children: [
+          {
+            path: ':id',
+            // action: noteEditAction,
+            element: <CardEdit />,
+            errorElement: <Error />,
+          },
+        ],
       },
       {
         path: 'contact',
@@ -29,6 +41,7 @@ const router = createBrowserRouter([
         // action: noteAction,
         errorElement: <Error />,
       },
+
     ],
   },
 ])

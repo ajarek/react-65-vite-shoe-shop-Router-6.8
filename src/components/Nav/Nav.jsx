@@ -29,12 +29,12 @@ const Nav = ({ title }) => {
        <Link className='link'
        to={'/contact'}
        >
-       <h2>Kontakt <span className='span'><FaMailBulk/></span></h2>
+       <h2>Kontakt<span className='span-contact'><FaMailBulk/></span></h2>
        </Link>
        <Link 
        className='link'
        to={'/cart'}
-       ><h2><span className='span'><FaShoppingCart/></span></h2>
+       ><h2><FaShoppingCart/><span className='span-cart'>2</span></h2>
        </Link>
       </ul>
       <div className='hamburger'>

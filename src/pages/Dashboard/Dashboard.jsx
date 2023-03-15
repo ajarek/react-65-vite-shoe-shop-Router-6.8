@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import './Dashboard.css'
 import Card from '../../components/Card/Card'
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -24,6 +26,7 @@ const Dashboard = () => {
         data.map((el) => {
           return (
             <Card
+              onClick={()=> navigate(`/card-edit/:${el.id}`)}
               key={el.key}
               title={el.title}
               image={el.image}

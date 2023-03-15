@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer; 
+  border-radius: 5px;
 }
 .card h4, .card h5{
   padding: 0.5rem;
@@ -16,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  border-radius: 5px;
 }
 .card img{
 width: 280px;
