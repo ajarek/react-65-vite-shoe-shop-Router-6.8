@@ -1,0 +1,26 @@
+.card{
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  background-color:#0fbcf9 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer; 
+}
+.card h4, .card h5{
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.card .wrapper-img{
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.card img{
+width: 280px;
+transition: all 0.5s ease-in-out;
+}
+.card img:hover{
+ transform: scale(1.2);
+}
