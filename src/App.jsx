@@ -1,9 +1,12 @@
+import { createContext, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Contact from './pages/Contact/Contact'
 import Cart from './pages/Cart/Cart'
 import CardEdit from './pages/CardEdit/CardEdit'
 import Main,{ mainLoader }  from './layouts/Main/Main'
+export const AppContext = createContext()
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -46,9 +49,17 @@ const router = createBrowserRouter([
   },
 ])
 function App() {
+  const [data, setData] = useState(null)
+  const [count, setCount]=useState(1)
+  const [color, setColor]=useState()
+  const [size, setSize]=useState()
   return (
     <div className='App'>
+      <AppContext.Provider
+        value={{ data, setData,count, setCount, color, setColor, size, setSize }}
+      >
       <RouterProvider router={router} />
+      </AppContext.Provider>
     </div>
   )
 }

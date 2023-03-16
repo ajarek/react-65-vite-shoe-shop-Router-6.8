@@ -1,32 +1,37 @@
 import React from 'react'
 import './Card.css'
-const Card = ({key,title,image,price,color,size,desc,onClick}) => {
+const Card = ({ title, image, price, color, size, desc, onClick }) => {
   return (
-    <div className="card" key={key} onClick={onClick}>
-        <h4>{title}</h4>
-        <div className="wrapper-img">
-        <img src={image} alt="image" />
+    <div
+      className='card'
+      onClick={onClick}
+    >
+      <h4>{title}</h4>
+      <div className='wrapper-center'>
+        <div className='wrapper-img'>
+          <img
+            src={image}
+            alt='image'
+          />
         </div>
+        <div className="wrapper-right">
         <h5>{price} PLN</h5>
-        {/* <p>Kolory:</p>
-        <div className="wrapper-color">
-          {color.map((c,i)=>{
-            return(
-              <p key={i}>{c}</p>
-            )
+
+        <div className='wrapper-color'>
+          {color?.map((c, i) => {
+            return <p key={i} onClick={()=>console.log(c)}>{c}</p>
           })}
-          </div>
-        <p>Rozmiar EU:</p>
-        <div className="wrapper-size">
-        {size.map((s, i) =>{return(
-          <p style={{border:'1px solid',width:'60px',textAlign:'center'}}>{s}</p>
-        )})}
         </div>
-        <p style={{width:'290px'}}>{desc}</p>
-        <p>➕<span style={{border:'1px solid',padding:'2px 10px'}}>3</span>➖</p>
-        <button>Dodaj do koszyka</button> */}
+
+        <div className='wrapper-size'>
+          {size?.map((s, i) => {
+            return <p key={i} onClick={()=>console.log(s)}>{s}</p>
+          })}
+        </div>
+        <p >{desc}</p>
+        </div>
       </div>
-      
+    </div>
   )
 }
 

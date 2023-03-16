@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   background: #0fbcf9;
-  
+  z-index: 2;
 }
 
 .nav .title {

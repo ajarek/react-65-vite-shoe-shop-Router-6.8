@@ -1,7 +1,7 @@
 [
    {
     "id":"1",
-    "image": "buty1.jpg",
+    "image": "/buty1.jpg",
     "title": "Nike Air Jordan",
     "price": "469,99",
     "color":["🟢", "🔵","⚪","⚫"],
@@ -10,7 +10,7 @@
   },
   {
     "id":"2",
-    "image": "buty2.jpg",
+    "image": "/buty2.jpg",
     "title": "Adidas",
     "price": "369,99",
     "color":["🟢", "🔵","⚪","⚫"],
@@ -19,7 +19,7 @@
   },
   {
     "id":"3",
-    "image": "buty3.jpg",
+    "image": "/buty3.jpg",
     "title": "Puma",
     "price": "399,99",
     "color":["🟢", "🔵","⚪","⚫"],
@@ -28,7 +28,7 @@
   },
   {
     "id":"4",
-    "image": "buty4.jpg",
+    "image": "/buty4.jpg",
     "title": "Vans",
     "price": "529,99",
     "color":["🟢", "🔵","⚪","⚫"],
