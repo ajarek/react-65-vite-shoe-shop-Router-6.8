@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../App'
 import './Card.css'
 const Card = ({ title, image, price, color, size, desc, onClick }) => {
+  const { colorShoes, setColorShoes, sizeShoes, setSizeShoes  } = useContext(AppContext)
   return (
     <div
       className='card'
@@ -19,13 +21,13 @@ const Card = ({ title, image, price, color, size, desc, onClick }) => {
 
         <div className='wrapper-color'>
           {color?.map((c, i) => {
-            return <p key={i} onClick={()=>console.log(c)}>{c}</p>
+            return <p key={i} onClick={()=>setColorShoes(c)}>{c}</p>
           })}
         </div>
 
         <div className='wrapper-size'>
           {size?.map((s, i) => {
-            return <p key={i} onClick={()=>console.log(s)}>{s}</p>
+            return <p key={i} onClick={()=>setSizeShoes(s)}>{s}</p>
           })}
         </div>
         <p >{desc}</p>

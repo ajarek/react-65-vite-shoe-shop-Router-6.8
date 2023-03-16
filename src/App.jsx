@@ -51,12 +51,12 @@ const router = createBrowserRouter([
 function App() {
   const [data, setData] = useState(null)
   const [count, setCount]=useState(1)
-  const [color, setColor]=useState()
-  const [size, setSize]=useState()
+  const [colorShoes, setColorShoes]=useState()
+  const [sizeShoes, setSizeShoes]=useState()
   return (
     <div className='App'>
       <AppContext.Provider
-        value={{ data, setData,count, setCount, color, setColor, size, setSize }}
+        value={{ data, setData,count, setCount, colorShoes, setColorShoes, sizeShoes, setSizeShoes }}
       >
       <RouterProvider router={router} />
       </AppContext.Provider>
