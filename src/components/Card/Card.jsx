@@ -21,7 +21,9 @@ const Card = ({ title, image, price, color, size, desc, onClick }) => {
 
         <div className='wrapper-color'>
           {color?.map((c, i) => {
+           
             return <p key={i} onClick={()=>setColorShoes(c)}>{c}</p>
+          
           })}
         </div>
 

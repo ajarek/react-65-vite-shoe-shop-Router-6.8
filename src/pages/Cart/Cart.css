@@ -1,3 +1,29 @@
-.cart{
-  padding-top:10vh ;
+table {
+  padding: 11vh 2rem 2rem 2rem;
+  width: 100%;
+}
+
+td,th {
+  border: 1px solid;
+  padding: 0 5px;
+  background-color: #0be881;
+}
+td:nth-child(1) {
+  padding-top: 5px;
+}
+td:nth-child(3),td:nth-child(4),td:nth-child(5) {
+  text-align: center;
+}
+td:nth-child(6),
+td:nth-child(7) {
+  text-align: right;
+}
+td:nth-child(8){
+  text-align: center;
+  cursor: pointer;
+  font-size:1.8rem;
+  transition: 0.3s ease-in-out;
+}
+td:nth-child(8):hover{
+  background-color:#ff5e57 ;
 }
