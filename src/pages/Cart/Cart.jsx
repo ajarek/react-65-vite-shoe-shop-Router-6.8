@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../App'
 import './Cart.css'
 const Cart = () => {
+  const { data, setData,cart, setCart } = useContext(AppContext)
   return (
-    <div className='cart'>Cart</div>
+    <div className='cart'>
+      {cart.map(el=>{
+      return(
+     
+      <div className="cart-wrapper" key={el.id}>
+                  {el.title}         
+      </div>
+      )
+       })
+      }           
+    </div>
   )
 }
 

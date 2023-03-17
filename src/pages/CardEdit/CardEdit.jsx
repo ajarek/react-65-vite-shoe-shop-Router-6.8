@@ -5,14 +5,17 @@ import  Card  from '../../components/Card/Card'
 import  Counter  from '../../components/Counter/Counter'
 import './CardEdit.css'
 const CardEdit = () => {
-  const { data, setData } = useContext(AppContext)
+  const { data, setData,cart, setCart } = useContext(AppContext)
   const navigate = useNavigate();
   let { id } = useParams()
    const itemCard = data.find((el) => el.id === id)
 
    const handleCart=()=>{
+    
+    setCart([...cart,itemCard])
     navigate('/')
    }
+   console.log(cart)
   return (
     <div className='card-edit'>
        <Card

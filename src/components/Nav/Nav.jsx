@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
+import { AppContext } from '../../App'
 import { FaShoppingCart,FaMailBulk } from 'react-icons/fa';
 import './Nav.css'
 import Hamburger from 'hamburger-react'
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 const Nav = ({ title }) => {
-  
+  const { data, setData,cart, setCart } = useContext(AppContext)
   const [isOpen, setOpen] = useState(false)
   return (
     <nav className='nav'>
@@ -34,7 +35,7 @@ const Nav = ({ title }) => {
        <Link 
        className='link'
        to={'/cart'}
-       ><h2><FaShoppingCart/><span className='span-cart'>2</span></h2>
+       ><h2><FaShoppingCart/><span className='span-cart'>{cart.length||0}</span></h2>
        </Link>
       </ul>
       <div className='hamburger'>
