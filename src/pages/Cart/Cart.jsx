@@ -3,9 +3,15 @@ import { AppContext } from '../../App'
 import { MdDeleteForever } from 'react-icons/md'
 import './Cart.css'
 const Cart = () => {
-  const { data, setData, cart, setCart, count, summary } = useContext(AppContext)
+  const { data, setData, cart, setCart, count, summary,setSummary } = useContext(AppContext)
   
-  
+ const deleteItem =(id)=>{
+  const itemCart = cart.find((el) => el.id === id)
+  const minus=itemCart.price*itemCart.newCount
+  setSummary([...summary,-minus])
+  const newCart = cart.filter(c => c.id !== id)
+  setCart(newCart)
+ }
   
   return (
    
@@ -44,7 +50,7 @@ const Cart = () => {
               <td>{el.newCount}</td>
               <td>{el.price}</td>
               <td>{el.newCount * el.price}</td>
-              <td>
+              <td onClick={()=>deleteItem(el.id)}>
                 <MdDeleteForever />
               </td>
             </tr>
@@ -53,10 +59,10 @@ const Cart = () => {
       </tbody>
       <tfoot>
        <tr>
-       <td className="all-sum" colspan="7">Do zapłaty PLN: {(summary.reduce((a,b)=>a+b,0)).toFixed(2)}</td>
+       <td className="all-sum" colSpan="7">Do zapłaty PLN: {(summary.reduce((a,b)=>a+b,0)).toFixed(2)}</td>
        </tr>
        <tr>
-        <td className="all-sum" colspan="7"><a href='https://www.paypal.com/pl/home' target={'_blank'} >Zamawiam i Płacę</a></td>
+        <td className="all-sum" colSpan="7"><a href='https://www.paypal.com/pl/home' target={'_blank'} >Zamawiam i Płacę</a></td>
        </tr>
       </tfoot>
       
