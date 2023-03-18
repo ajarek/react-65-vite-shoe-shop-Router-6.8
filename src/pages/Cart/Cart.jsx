@@ -49,7 +49,7 @@ const Cart = () => {
               <td>{el.color}</td>
               <td>{el.newCount}</td>
               <td>{el.price}</td>
-              <td>{el.newCount * el.price}</td>
+              <td>{(el.newCount * el.price).toFixed(2)}</td>
               <td onClick={()=>deleteItem(el.id)}>
                 <MdDeleteForever />
               </td>
