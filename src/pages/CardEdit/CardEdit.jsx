@@ -5,16 +5,20 @@ import  Card  from '../../components/Card/Card'
 import  Counter  from '../../components/Counter/Counter'
 import './CardEdit.css'
 const CardEdit = () => {
-  const { data, setData,cart, setCart,count,sizeShoes,colorShoes } = useContext(AppContext)
+  const { data, setData,cart, setCart,count,sizeShoes,colorShoes,summary,setSummary } = useContext(AppContext)
   const navigate = useNavigate();
   let { id } = useParams()
    const itemCard = data.find((el) => el.id === id)
-
+  
    
    const handleCart=()=>{
   
    const newItemCard ={...itemCard,newCount:count,size:sizeShoes,color:colorShoes}
+   const sum=newItemCard.price*newItemCard.newCount
+  
+   setSummary([...summary,sum]);
     setCart([...cart,newItemCard])
+
     navigate('/')
    }
    

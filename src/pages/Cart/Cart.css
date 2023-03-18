@@ -27,3 +27,9 @@ td:nth-child(8){
 td:nth-child(8):hover{
   background-color:#ff5e57 ;
 }
+.all-sum{
+  border: none;
+  background-color: transparent;
+  text-align: right;
+  font-weight: 600;
+}

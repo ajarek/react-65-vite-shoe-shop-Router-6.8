@@ -54,10 +54,11 @@ function App() {
   const [colorShoes, setColorShoes]=useState()
   const [sizeShoes, setSizeShoes]=useState()
   const [cart, setCart]=useState([])
+  const [summary,setSummary]=useState([])
   return (
     <div className='App'>
       <AppContext.Provider
-        value={{ data, setData,count, setCount, colorShoes, setColorShoes, sizeShoes, setSizeShoes,cart, setCart }}
+        value={{ data, setData,count, setCount, colorShoes, setColorShoes, sizeShoes, setSizeShoes,cart, setCart, summary,setSummary }}
       >
       <RouterProvider router={router} />
       </AppContext.Provider>

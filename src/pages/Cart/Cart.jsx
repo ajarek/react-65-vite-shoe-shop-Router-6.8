@@ -1,11 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState,useEffect } from 'react'
 import { AppContext } from '../../App'
 import { MdDeleteForever } from 'react-icons/md'
 import './Cart.css'
 const Cart = () => {
-  const { data, setData, cart, setCart, count } = useContext(AppContext)
-
+  const { data, setData, cart, setCart, count, summary } = useContext(AppContext)
+  
+  
+  
   return (
+   
     <table>
       <thead>
       <tr>
@@ -14,13 +17,14 @@ const Cart = () => {
         <th>Rozmiar</th>
         <th>Color</th>
         <th>Ilość</th>
-        <th>Cena</th>
-        <th>Wartość</th>
+        <th>Cena PLN</th>
+        <th>Wartość PLN</th>
         <th>Usuń</th>
       </tr>
       </thead>
       <tbody>
         {cart.map((el) => {
+         
           return (
             <tr
               className='cart-wrapper'
@@ -47,7 +51,15 @@ const Cart = () => {
           )
         })}
       </tbody>
+      <tfoot>
+       <tr>
+       <td className="all-sum" colspan="7">Do zapłaty PLN: {(summary.reduce((a,b)=>a+b,0)).toFixed(2)}</td>
+       </tr>
+      </tfoot>
+      
     </table>
+    
+    
   )
 }
 
