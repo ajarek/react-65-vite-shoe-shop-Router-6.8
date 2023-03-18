@@ -55,6 +55,9 @@ const Cart = () => {
        <tr>
        <td className="all-sum" colspan="7">Do zapłaty PLN: {(summary.reduce((a,b)=>a+b,0)).toFixed(2)}</td>
        </tr>
+       <tr>
+        <td className="all-sum" colspan="7"><a href='https://www.paypal.com/pl/home' target={'_blank'} >Zamawiam i Płacę</a></td>
+       </tr>
       </tfoot>
       
     </table>
