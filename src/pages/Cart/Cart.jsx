@@ -12,7 +12,7 @@ const Cart = () => {
   const newCart = cart.filter(c => c.id !== id)
   setCart(newCart)
  }
-  
+  const finalResult=(summary.reduce((a,b)=>a+b,0)).toFixed(2)
   return (
    
     <table>
@@ -59,7 +59,7 @@ const Cart = () => {
       </tbody>
       <tfoot>
        <tr>
-       <td className="all-sum" colSpan="7">Do zapłaty PLN: {(summary.reduce((a,b)=>a+b,0)).toFixed(2)}</td>
+       <td className="all-sum" colSpan="7">Do zapłaty PLN: {finalResult>0?finalResult:0}</td>
        </tr>
        <tr>
         <td className="all-sum" colSpan="7"><a href='https://www.paypal.com/pl/home' target={'_blank'} >Zamawiam i Płacę</a></td>
