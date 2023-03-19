@@ -1,10 +1,13 @@
 import { createContext, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
-import Contact from './pages/Contact/Contact'
+import Error from './pages/Error/Error'
+import Contact,{mailAction} from './pages/Contact/Contact'
 import Cart from './pages/Cart/Cart'
 import CardEdit from './pages/CardEdit/CardEdit'
 import Main,{ mainLoader }  from './layouts/Main/Main'
+
+
 export const AppContext = createContext()
 
 const router = createBrowserRouter([
@@ -26,7 +29,6 @@ const router = createBrowserRouter([
         children: [
           {
             path: ':id',
-            // action: noteEditAction,
             element: <CardEdit />,
             errorElement: <Error />,
           },
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
-        // action: noteAction,
+        action: mailAction,
         errorElement: <Error />,
       },
       {
