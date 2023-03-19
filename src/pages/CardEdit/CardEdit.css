@@ -1,23 +1,29 @@
+.card-edit{
+  margin-bottom: 2rem;
+}
 .card-edit .card{
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   background-color:#4bcffa ;
   padding: 11vh 2rem 2rem 2rem;
   box-shadow: none;
+  
 }
 .card-edit .wrapper-center{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  
 }
 .card-edit .wrapper-right{
-  position: relative;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding-bottom: 5rem;
+ 
 }
 .card-edit h4, .card h5{
   padding: 0.5rem;
@@ -77,12 +83,12 @@ transition: all 0.5s ease-in-out;
   background: red;
 }
 .card-edit .add-cart{
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
+  justify-content: center;
+  /* position: absolute;
   bottom:10%;
-  right: 0%;
+  right: 0%; */
   padding-right: 3rem;
 }
 .card-edit .add-cart button{
@@ -91,8 +97,45 @@ transition: all 0.5s ease-in-out;
   border: none;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
   border-radius: 3px;
-  transition: all 0.2s ease-in-out;;
+  transition: all 0.2s ease-in-out;
+ 
 }
 .card-edit .add-cart button:hover{
   background-color: rgb(171, 242, 242);
+}
+@media (max-width:1080px){
+  .card-edit .wrapper-center{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .card-edit .card .wrapper-img{
+    width: 100%;
+    height: auto;
+    
+  }
+  .card-edit img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-edit .add-cart{
+    /* width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute; */
+    /* bottom:-90%;
+    right: 0%; */
+    padding-right:0rem;
+  }
+  .card-edit .wrapper-color{
+    width: 100%;
+    justify-content: center;
+  }
+  .card-edit .wrapper-size{
+    width: 100%;
+    justify-content: center;
+  }
+  .wrapper-right h5{
+   
+    width: 100%;
+    text-align: center;
+  }
 }

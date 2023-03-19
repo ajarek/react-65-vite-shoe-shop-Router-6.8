@@ -93,3 +93,16 @@
     transform: translateY(100vh);
   }
 }
+@media (max-width:485px) {
+  .nav {
+    padding: 0 1rem;
+  }
+  .nav .title{
+    width: 80%;
+  }
+  .nav .title h1{
+   font-size: 1rem;
+   text-align: center;
+  }
+  
+}
