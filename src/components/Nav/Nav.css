@@ -15,7 +15,7 @@
 .nav .title {
   width: 375px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   color: #1e272e;
 }
@@ -25,18 +25,17 @@
   color: #1e272e;
   display: flex;
   align-items: center;
-  
 }
-.nav .link h2{
+.nav .link h2 {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
-.nav .link .span-contact{
-  font-size:1.8rem ;
+.nav .link .span-contact {
+  font-size: 1.8rem;
   margin-left: 5px;
 }
-.nav .link .span-cart{
+.nav .link .span-cart {
   display: flex;
   width: 30px;
   height: 30px;
@@ -47,7 +46,7 @@
   font-size: 1.1rem;
   font-weight: 500;
   margin-left: 5px;
-  margin-bottom:15px ;
+  margin-bottom: 15px;
 }
 .nav .wrapper {
   width: 55%;
@@ -88,21 +87,20 @@
   .link {
     transition: all 0.3s ease-in-out;
   }
-  
+
   .navbar-none {
     transform: translateY(100vh);
   }
 }
-@media (max-width:485px) {
+@media (max-width: 485px) {
   .nav {
     padding: 0 1rem;
   }
-  .nav .title{
+  .nav .title {
     width: 80%;
   }
-  .nav .title h1{
-   font-size: 1rem;
-   text-align: center;
+  .nav .title h1 {
+    font-size: 1rem;
+    text-align: center;
   }
-  
 }

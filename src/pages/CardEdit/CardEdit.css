@@ -1,35 +1,32 @@
-.card-edit{
+.card-edit {
   margin-bottom: 2rem;
 }
-.card-edit .card{
+.card-edit .card {
   width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  background-color:#4bcffa ;
+  background-color: #4bcffa;
   padding: 11vh 2rem 2rem 2rem;
   box-shadow: none;
-  
 }
-.card-edit .wrapper-center{
+.card-edit .wrapper-center {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  
+  grid-template-columns: repeat(2, 1fr);
 }
-.card-edit .wrapper-right{
-  
+.card-edit .wrapper-right {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding-bottom: 5rem;
- 
 }
-.card-edit h4, .card h5{
+.card-edit h4,
+.card h5 {
   padding: 0.5rem;
   font-size: 1.2rem;
 }
-.card-edit .card .wrapper-img{
+.card-edit .card .wrapper-img {
   width: 500px;
   height: 500px;
   display: flex;
@@ -39,102 +36,89 @@
   border-radius: 5px;
 }
 
-.card-edit img{
-width:500px;
-transition: all 0.5s ease-in-out;
+.card-edit img {
+  width: 500px;
+  transition: all 0.5s ease-in-out;
 }
-.card-edit img:hover{
- transform: scale(1.2);
+.card-edit img:hover {
+  transform: scale(1.2);
 }
-.card-edit .wrapper-color{
+.card-edit .wrapper-color {
   display: flex;
   font-size: 1.5rem;
 }
-.card-edit .wrapper-color p{
+.card-edit .wrapper-color p {
   margin-right: 10px;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
 }
-.card-edit .wrapper-color p:hover{
+.card-edit .wrapper-color p:hover {
   transform: scale(1.2);
 }
-.card-edit .wrapper-color p:active{
+.card-edit .wrapper-color p:active {
   border: 1px solid red;
-  
 }
-.card-edit .wrapper-size{
+.card-edit .wrapper-size {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   transition: all 0.3s ease-in-out;
 }
-.card-edit .wrapper-size p{
-  border: 1px solid ;
+.card-edit .wrapper-size p {
+  border: 1px solid;
   width: 40px;
   text-align: center;
   margin-top: 10px;
   margin-right: 10px;
 }
-.card-edit .wrapper-size p:hover{
+.card-edit .wrapper-size p:hover {
   transform: scale(1.2);
 }
-.card-edit .wrapper-size p:active{
+.card-edit .wrapper-size p:active {
   background: red;
 }
-.card-edit .add-cart{
+.card-edit .add-cart {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* position: absolute;
-  bottom:10%;
-  right: 0%; */
   padding-right: 3rem;
 }
-.card-edit .add-cart button{
+.card-edit .add-cart button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: none;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
- 
 }
-.card-edit .add-cart button:hover{
+.card-edit .add-cart button:hover {
   background-color: rgb(171, 242, 242);
 }
-@media (max-width:1080px){
-  .card-edit .wrapper-center{
-    grid-template-columns: repeat(1,1fr);
+@media (max-width: 1080px) {
+  .card-edit .wrapper-center {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .card-edit .card .wrapper-img{
+  .card-edit .card .wrapper-img {
     width: 100%;
     height: auto;
-    
   }
-  .card-edit img{
+  .card-edit img {
     width: 100%;
     object-fit: cover;
   }
-  .card-edit .add-cart{
-    /* width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    position: absolute; */
-    /* bottom:-90%;
-    right: 0%; */
-    padding-right:0rem;
+  .card-edit .add-cart {
+    padding-right: 0rem;
   }
-  .card-edit .wrapper-color{
+  .card-edit .wrapper-color {
     width: 100%;
     justify-content: center;
   }
-  .card-edit .wrapper-size{
+  .card-edit .wrapper-size {
     width: 100%;
     justify-content: center;
   }
-  .wrapper-right h5{
-   
+  .wrapper-right h5 {
     width: 100%;
     text-align: center;
   }

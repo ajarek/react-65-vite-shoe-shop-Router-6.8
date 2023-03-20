@@ -3,7 +3,6 @@ import { redirect } from 'react-router-dom'
 import FormContent from '../../components/FormContent/FormContent'
 import './Contact.css'
 
-
 export const mailAction = async ({ request }) => {
   const data = await request.formData()
   const formData = Object.fromEntries(data)
@@ -19,8 +18,8 @@ const Contact = () => {
   return (
     <div className='contact'>
       <FormContent
-      headerTitle={'Napisz do Nas'}
-      buttonName={'Wyślij'}
+        headerTitle={'Napisz do Nas'}
+        buttonName={'Wyślij'}
       />
     </div>
   )

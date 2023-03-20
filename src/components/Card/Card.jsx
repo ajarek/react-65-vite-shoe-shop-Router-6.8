@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AppContext } from '../../App'
 import './Card.css'
 const Card = ({ title, image, price, color, size, desc, onClick }) => {
-  const { colorShoes, setColorShoes, sizeShoes, setSizeShoes  } = useContext(AppContext)
+  const { setColorShoes, setSizeShoes } = useContext(AppContext)
   return (
     <div
       className='card'
@@ -16,23 +16,35 @@ const Card = ({ title, image, price, color, size, desc, onClick }) => {
             alt='image'
           />
         </div>
-        <div className="wrapper-right">
-        <h5>{price} PLN</h5>
+        <div className='wrapper-right'>
+          <h5>{price} PLN</h5>
 
-        <div className='wrapper-color'>
-          {color?.map((c, i) => {
-           
-            return <p key={i} onClick={()=>setColorShoes(c)}>{c}</p>
-          
-          })}
-        </div>
+          <div className='wrapper-color'>
+            {color?.map((c, i) => {
+              return (
+                <p
+                  key={i}
+                  onClick={() => setColorShoes(c)}
+                >
+                  {c}
+                </p>
+              )
+            })}
+          </div>
 
-        <div className='wrapper-size'>
-          {size?.map((s, i) => {
-            return <p key={i} onClick={()=>setSizeShoes(s)}>{s}</p>
-          })}
-        </div>
-        <p >{desc}</p>
+          <div className='wrapper-size'>
+            {size?.map((s, i) => {
+              return (
+                <p
+                  key={i}
+                  onClick={() => setSizeShoes(s)}
+                >
+                  {s}
+                </p>
+              )
+            })}
+          </div>
+          <p>{desc}</p>
         </div>
       </div>
     </div>
